@@ -1,15 +1,70 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-  <title>Liste des cadeaux</title>
-  <style type="text/css">
-  </style>
- </head>
- <body>    
- 	Il y a une erreur dans le programme
-        
-    <script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>
-    <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script> 
-    <script src="action/application.js"></script> 
- </body>
+    <head>
+        <title>Liste d'Anniversaires/Parties</title>
+        <meta charset="utf-8" />
+        <style>
+            .page-liste-party {
+                height: 100%;
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Erreur de chargement du programme.</p>
+
+        <script type="plain/text" id="page-liste-party">
+            <div class="page-liste-party">
+		    	<h1>Liste des parties</h1>
+		    	<a href="#ajouter-party">Ajouter une party</a>
+		    	<ul id="liste-party"></ul>
+	    	</div>
+	    </script>
+
+        <script type="plain/text" id="page-party">
+            <h1 id="party-titre"></h1>
+            <h2 id="party-description"></h2>
+            <p>Participants : </p>
+            <p id="party-participants"></p>
+	        <a href="#">Revenir à la liste complète</a>
+        </script>
+
+        <script type="plain/text" id="page-ajouter-party">
+            <h1>Ajouter une party</h1>
+            <article id='main' class="current">
+                <section>
+                    <form id="formulaire-ajouter">
+                        <fieldset>
+                        <legend>Identification de la party</legend>
+                        <div>
+                            <label for="titre">Titre</label>
+                            <input type="text" name="titre" id="titre"/>
+                        </div>
+                        <div>
+                            <label for="description">Description</label>
+                            <input type="text" name="description" id="description"/>
+                        </div>
+                        </fieldset>
+                        <fieldset>
+                        <legend>Détails sur la party</legend>
+                            <div>
+                            <label for="participants">Participants</label>
+                            <textarea name="participants" id="participants"></textarea>
+                        </div>
+                        </fieldset>
+                        <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+                    </form>
+                    <a href="#">Annuler et revenir à la liste complète</a>
+                </section>
+            </article>
+        </script>
+
+        <script src="action/modele/Party.js"></script>
+        <script src="action/vue/AjouterPartyVue.js"></script>
+        <script src="action/vue/PartyVue.js"></script>
+        <script src="action/vue/ListePartyVue.js"></script>
+        <script src="action/donnee/PartyDAO.js"></script>
+        <script src="action/application.js"></script>
+
+    </body>
 </html>
