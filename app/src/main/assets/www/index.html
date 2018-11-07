@@ -59,6 +59,36 @@
             </article>
         </script>
 
+        <script type="plain/text" id="page-modifier-party">
+            <h1>Modifier une party</h1>
+            <article id='main' class="current">
+                <section>
+                    <form id="formulaire-modifier">
+                        <fieldset>
+                        <legend>Identification de la party</legend>
+                        <div>
+                            <label for="titre">Titre</label>
+                            <input type="text" name="titre" id="titre"/>
+                        </div>
+                        <div>
+                            <label for="description">Description</label>
+                            <input type="text" name="description" id="description"/>
+                        </div>
+                        </fieldset>
+                        <fieldset>
+                        <legend>Détails sur la party</legend>
+                            <div>
+                            <label for="participants">Participants</label>
+                            <textarea name="participants" id="participants"></textarea>
+                        </div>
+                        </fieldset>
+                        <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+                    </form>
+                    <a href="#">Annuler et revenir à la liste complète</a>
+                </section>
+            </article>
+        </script>
+
         <script src="action/modele/Party.js"></script>
         <script src="action/vue/AjouterPartyVue.js"></script>
         <script src="action/vue/PartyVue.js"></script>
