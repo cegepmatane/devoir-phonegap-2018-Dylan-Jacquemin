@@ -12,7 +12,13 @@ var PartyDAO = function()
 
     this.chercherAvecId = function(id)
     {
-        
+        for(var i = 0; i < listeParty.length; i++)
+        {
+            if(listeParty[i].id == id)
+            {
+                return listeParty[i];
+            }
+        }
     }
 
     this.ajouter = function(party)
@@ -24,13 +30,19 @@ var PartyDAO = function()
 
         listeParty[party.id] = party;
         localStorage['party'] = JSON.stringify(listeParty);
-        console.log("lister->listeParty : " + JSON.stringify(listeParty));
+        //console.log("lister->listeParty : " + JSON.stringify(listeParty));
+    }
+
+    this.modifier = function(party)
+    {
+        listeParty[party.id] = party;
+        localStorage['party'] = JSON.stringify(listeParty);
     }
 
     this.lister = function()
     {
-        console.log("lister->listeParty : " + listeParty);
-        console.log("lister->localStorage['party'] : " + localStorage['party']);
+        //console.log("lister->listeParty : " + listeParty);
+        //console.log("lister->localStorage['party'] : " + localStorage['party']);
         if (localStorage['party'])
             listeParty = JSON.parse(localStorage['party']);
 
