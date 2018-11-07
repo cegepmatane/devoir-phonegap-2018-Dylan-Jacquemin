@@ -24,7 +24,7 @@ var PartyVue = (
                 partyParticipants.innerHTML = party.participants;
 
                 lienModificationParty = document.getElementById("redirection-modifier-party");
-                lienModificationParty.innerHTML = '<a href=#modifier-party/' + party.id + '>Modifier la party</a>';
+                lienModificationParty.innerHTML = '<a class="button" href=#modifier-party/' + party.id + '>Modifier la party</a>';
             }
 
         };
