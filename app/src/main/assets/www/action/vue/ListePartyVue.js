@@ -11,7 +11,7 @@ var ListePartyVue = (
 
                 var li = "";
                 for (var numeroParty in listePartyDonnee) {
-                    li += '<li><a href="#party/' + numeroParty + '">' + listePartyDonnee[numeroParty].titre + '</a></li>';
+                    li += '<li><a class="aListe" href="#party/' + numeroParty + '">' + listePartyDonnee[numeroParty].titre + '</a></li>';
                 }
                 listeParty.innerHTML = li;
             }
