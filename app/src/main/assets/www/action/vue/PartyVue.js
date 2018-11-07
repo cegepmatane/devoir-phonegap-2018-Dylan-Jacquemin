@@ -24,7 +24,10 @@ var PartyVue = (
                 partyParticipants.innerHTML = party.participants;
 
                 lienModificationParty = document.getElementById("redirection-modifier-party");
-                lienModificationParty.innerHTML = '<a class="button" href="#modifier-party/' + party.id + '">Modifier la party</a>';
+                lienModificationParty.href = '#modifier-party/' + party.id;
+
+                lienSuppressionParty = document.getElementById("redirection-supprimer-party");
+                lienSuppressionParty.href = '#supprimer-party/' + party.id;
             }
 
         };

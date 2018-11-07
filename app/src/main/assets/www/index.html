@@ -12,7 +12,7 @@
         <script type="plain/text" id="page-liste-party">
             <div class="page-liste-party">
 		    	<h1>Liste des parties</h1>
-		    	<a class="button" href="#ajouter-party">Ajouter une party</a>
+		    	<a class="bouton" href="#ajouter-party">Ajouter une party</a>
 		    	<ul id="liste-party"></ul>
 	    	</div>
 	    </script>
@@ -22,8 +22,9 @@
             <h2 id="party-description"></h2>
             <p>Participants :</p>
             <p style="margin-left: 3.5%;" id="party-participants"></p>
-            <a id="redirection-modifier-party" href="#"></a>
-            <a class="button" href="#">Revenir à la liste complète</a>
+            <a class="bouton" id="redirection-modifier-party">Modifier</a>
+            <a class="bouton" style="float:right;" id="redirection-supprimer-party">Supprimer</a>
+            <a class="bouton" href="#">Revenir à la liste</a>
         </script>
 
         <script type="plain/text" id="page-ajouter-party">
@@ -33,9 +34,9 @@
                 <input placeholder="Description" type="text" name="description" id="description" />
                 <textarea placeholder="Participants" name="participants" id="participants"></textarea>
 
-                <input class="button" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+                <input class="bouton" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
             </form>
-            <a class="button" href="#">Annuler et revenir à la liste complète</a>
+            <a class="bouton" href="#">Annuler et revenir à la liste</a>
         </script>
 
         <script type="plain/text" id="page-modifier-party">
@@ -45,9 +46,9 @@
                     <input placeholder="Description" type="text" name="description" id="description" />
                     <textarea placeholder="Participants" name="participants" id="participants"></textarea>
                     
-                    <input class="button" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer" />
+                    <input class="bouton" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer" />
                 </form>
-                <a class="button" href="#">Annuler et revenir à la liste complète</a>
+                <a class="bouton" href="#">Annuler et revenir à la liste</a>
         </script>
 
         <script src="action/modele/Party.js"></script>

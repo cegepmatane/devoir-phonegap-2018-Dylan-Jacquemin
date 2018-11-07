@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.button {
+.bouton {
     border: none;
     background-color: #6a0080;
     border-radius: 5px;
@@ -21,7 +21,7 @@
     align-content: center;
 }
 
-.button:visited{
+.bouton:visited{
     color: white;
     text-decoration: none;
 }
