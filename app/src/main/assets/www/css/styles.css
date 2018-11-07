@@ -5,7 +5,7 @@
 .button {
     border: none;
     background-color: #6a0080;
-    border-radius: 1024px;
+    border-radius: 5px;
     color: white;
     font-size: 20px;
     text-decoration: none;
@@ -30,7 +30,7 @@ ul{
 }
 
 hr {
-    color: #6a0080;
+    background-color: #6a0080;
 }
 
 ul .aListe {
