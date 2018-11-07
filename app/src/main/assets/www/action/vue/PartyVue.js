@@ -8,6 +8,7 @@ var PartyVue = (
             var partyTitre;
             var partyDescription;
             var partyParticipants;
+            var lienModificationParty;
 
             this.afficher = function()
             {
@@ -21,6 +22,9 @@ var PartyVue = (
 
                 partyParticipants = document.getElementById("party-participants");
                 partyParticipants.innerHTML = party.participants;
+
+                lienModificationParty = document.getElementById("redirection-modifier-party");
+                lienModificationParty.innerHTML = '<a href=#modifier-party/' + party.id + '>Modifier la party</a>';
             }
 
         };

@@ -12,8 +12,8 @@ var ModifierPartyVue = (
                 formulaireModifier.addEventListener("submit", enregistrerModificationParty);
             
                 document.getElementById("titre").value = party.titre;
-                document.getElementById("marque").value = party.marque;
                 document.getElementById("description").value = party.description;
+                document.getElementById("participants").value = party.participants;
             }
 
             var enregistrerModificationParty = function(evenement)
@@ -26,7 +26,7 @@ var ModifierPartyVue = (
 
                 var partyModifiee = new Party(party.id, titre, description, participants);
 
-                actionEnregistrerParty(partyModifiee);
+                actionEnregistrerModificationParty(partyModifiee);
             }
         };
     }
