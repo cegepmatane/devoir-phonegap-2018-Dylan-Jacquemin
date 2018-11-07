@@ -1,5 +1,6 @@
 (
-    function () {
+    function ()
+    {
         var instance = this;
 
         var initialiser = function()
@@ -24,6 +25,15 @@
                 var ajouterPartyVue = new AjouterPartyVue(actionEnregistrerParty);
                 ajouterPartyVue.afficher();
             }
+            else if (hash.match(/^#modifier-party\/([0-9]+)/))
+            {
+                var navigation = hash.match(/^#modifier-party\/([0-9]+)/);
+                var idParty = navigation[1];
+
+                var modifierPartyVue = new ModifierPartyVue(actionModifierParty, partyDAO.chercherAvecId(idParty));
+
+                modifierPartyVue.afficher();
+            }
             else
             {
                 var navigation = hash.match(/^#party\/([0-9]+)/);
@@ -40,6 +50,12 @@
             this.partyDAO.ajouter(party);
             naviguerAccueil();
         };
+
+        var actionModifierParty = function(party)
+        {
+            this.partyDAO.modifier(party);
+            naviguerAccueil();
+        }
 
         var naviguerAccueil = function()
         {
