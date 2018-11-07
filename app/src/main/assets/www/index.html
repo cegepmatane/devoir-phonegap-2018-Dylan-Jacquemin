@@ -3,12 +3,8 @@
     <head>
         <title>Liste d'Anniversaires/Parties</title>
         <meta charset="utf-8" />
-        <style>
-            .page-liste-party {
-                height: 100%;
-                overflow: scroll;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
         <p>Erreur de chargement du programme.</p>
@@ -16,7 +12,7 @@
         <script type="plain/text" id="page-liste-party">
             <div class="page-liste-party">
 		    	<h1>Liste des parties</h1>
-		    	<a href="#ajouter-party">Ajouter une party</a>
+		    	<a class="button" href="#ajouter-party">Ajouter une party</a>
 		    	<ul id="liste-party"></ul>
 	    	</div>
 	    </script>
@@ -26,8 +22,8 @@
             <h2 id="party-description"></h2>
             <p>Participants : </p>
             <p id="party-participants"></p>
-            <a id="redirection-modifier-party" href="#">Modifier la party</a>
-	        <a href="#">Revenir à la liste complète</a>
+            <a class="button" id="redirection-modifier-party" href="#">Modifier la party</a>
+            <a class="button" href="#">Revenir à la liste complète</a>
         </script>
 
         <script type="plain/text" id="page-ajouter-party">
@@ -53,9 +49,9 @@
                             <textarea name="participants" id="participants"></textarea>
                         </div>
                         </fieldset>
-                        <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+                        <input class="button" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
                     </form>
-                    <a href="#">Annuler et revenir à la liste complète</a>
+                    <a class="button" href="#">Annuler et revenir à la liste complète</a>
                 </section>
             </article>
         </script>
@@ -83,9 +79,9 @@
                             <textarea name="participants" id="participants"></textarea>
                         </div>
                         </fieldset>
-                        <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+                        <input class="button" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer" />
                     </form>
-                    <a href="#">Annuler et revenir à la liste complète</a>
+                    <a class="button" href="#">Annuler et revenir à la liste complète</a>
                 </section>
             </article>
         </script>

@@ -1,7 +1,6 @@
 var ListePartyVue = (
     function()
     {
-
         var pageListeParty = document.getElementById("page-liste-party").innerHTML;
 
         return function (listePartyDonnee) {
@@ -12,11 +11,7 @@ var ListePartyVue = (
 
                 var li = "";
                 for (var numeroParty in listePartyDonnee) {
-                    li += '<li><a href="#party/' +
-                        numeroParty +
-                        '">' +
-                        listePartyDonnee[numeroParty].titre +
-                        "</a></li>";
+                    li += '<li><a href="#party/' + numeroParty + '">' + listePartyDonnee[numeroParty].titre + '</a></li>';
                 }
                 listeParty.innerHTML = li;
             }

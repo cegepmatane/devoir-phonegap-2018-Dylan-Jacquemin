@@ -1,0 +1,32 @@
+.page-liste-party {
+    height: 100%;
+    overflow: scroll;
+}
+
+.button {
+    border: none;
+    background-color: #6a0080;
+    border-radius: 1024px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+    display: inline-block;
+    width: 90%;
+    align-content: center;
+}
+
+.button:visited{
+    color: white;
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    color: #6a0080;
+}
