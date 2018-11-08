@@ -21,7 +21,7 @@
     align-content: center;
 }
 
-ul{
+ul {
     color: #6a0080;
 }
 
@@ -29,14 +29,7 @@ hr {
     background-color: #6a0080;
 }
 
-ul .aListe {
-    text-decoration: none;
-    color: #6a0080;
-    font-size: 20px;
-    display: inline-block;
-}
-
-ul .aListe:visited {
+ul .aListe, ul .aListe:visited {
     text-decoration: none;
     color: #6a0080;
     font-size: 20px;
@@ -49,17 +42,17 @@ h1 {
     font-size: 24px;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6 {
     color: #6a0080;
     font-size: 24px;
 }
 
-p{
+p {
     color: #6a0080;
     font-size: 18px;
 }
 
-input{
+input {
     border: 2px solid;
     border-radius: 5px;
     border-color: #6a0080;
@@ -72,7 +65,7 @@ input{
     text-indent: 8px;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: none;
     border: 1px solid;
     border-color: #9c27b0;
@@ -89,10 +82,4 @@ textarea {
     width: 95%;
     margin: 2.5%;
     text-indent: 8px;
-}
-
-textarea:focus {
-    outline: none;
-    border: 1px solid;
-    border-color: #9c27b0;
 }
