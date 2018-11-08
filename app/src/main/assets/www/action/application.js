@@ -34,6 +34,14 @@
 
                 modifierPartyVue.afficher();
             }
+            else if (hash.match(/^#supprimer-party\/([0-9]+)/))
+            {
+                var navigation = hash.match(/^#supprimer-party\/([0-9]+)/);
+                var idParty = navigation[1];
+
+                this.partyDAO.supprimer(idParty);
+                naviguerAccueil();
+            }
             else
             {
                 var navigation = hash.match(/^#party\/([0-9]+)/);

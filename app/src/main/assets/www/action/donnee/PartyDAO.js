@@ -60,5 +60,22 @@ var PartyDAO = function()
         return listeParty;
     }
 
+    this.supprimer = function(id)
+    {
+        listePartyTemp = [];
+        for (var i = 0; i < listeParty.length; i++) {
+            if (listeParty[i].id != id) {
+                listePartyTemp[i] = listeParty[i];
+            }
+        }
+
+        listeParty = [];
+        for (var i = 0; i < listePartyTemp.length; i++) {
+            listeParty[i] = listePartyTemp[i];
+        }
+
+        localStorage['party'] = JSON.stringify(listeParty);
+    }
+
     initialiser();
 }
