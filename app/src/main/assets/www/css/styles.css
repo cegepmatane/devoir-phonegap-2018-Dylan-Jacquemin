@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.bouton {
+.bouton, .bouton:visited {
     border: none;
     background-color: #6a0080;
     border-radius: 5px;
@@ -19,11 +19,6 @@
     display: inline-block;
     width: 95%;
     align-content: center;
-}
-
-.bouton:visited{
-    color: white;
-    text-decoration: none;
 }
 
 ul{
