@@ -17,6 +17,12 @@ var AjouterPartyVue = (
             {
                 evenement.preventDefault();
 
+                if (document.getElementById("titre").value == "")
+                {
+                    window.alert("Vous devez entrer un titre !");
+                    return;
+                }
+
                 var titre = document.getElementById("titre").value;
                 var description = document.getElementById("description").value;
                 var participants = document.getElementById("participants").value;
