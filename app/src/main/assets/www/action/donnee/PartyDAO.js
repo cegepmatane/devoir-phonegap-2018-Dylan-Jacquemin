@@ -12,13 +12,7 @@ var PartyDAO = function()
 
     this.chercherAvecId = function(id)
     {
-        for(var i = 0; i < listeParty.length; i++)
-        {
-            if(listeParty[i].id == id)
-            {
-                return listeParty[i];
-            }
-        }
+        return listeParty[id];
     }
 
     this.ajouter = function(party)
@@ -48,31 +42,25 @@ var PartyDAO = function()
 
         for (position in listeParty)
         {
-
-            var party = new Party(
-                listeParty[position].id,
-                listeParty[position].titre,
-                listeParty[position].description,
-                listeParty[position].participants
+            if (listeParty[position] != null)
+            {
+                var party = new Party(
+                    listeParty[position].id,
+                    listeParty[position].titre,
+                    listeParty[position].description,
+                    listeParty[position].participants
                 );
-            listeParty[position] = party;
+                listeParty[position] = party;
+            }
+            else
+                listeParty[position] = null;
         }
         return listeParty;
     }
 
     this.supprimer = function(id)
     {
-        listePartyTemp = [];
-        for (var i = 0; i < listeParty.length; i++) {
-            if (listeParty[i].id != id) {
-                listePartyTemp[i] = listeParty[i];
-            }
-        }
-
-        listeParty = [];
-        for (var i = 0; i < listePartyTemp.length; i++) {
-            listeParty[i] = listePartyTemp[i];
-        }
+        listeParty[id] = null;
 
         localStorage['party'] = JSON.stringify(listeParty);
     }
