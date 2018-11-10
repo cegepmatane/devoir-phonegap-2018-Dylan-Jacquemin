@@ -18,7 +18,7 @@ var PartyDAO = function()
     this.ajouter = function(party)
     {
         if (listeParty.length > 0)
-            party.id = listeParty[listeParty.length-1].id + 1;
+            party.id = listeParty.length;
         else
             party.id = 0;
 
